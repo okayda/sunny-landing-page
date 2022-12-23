@@ -1,0 +1,31 @@
+@use "../abstracts/" as *;
+
+.hero-section {
+  background-image: url("../../assets/mobile/image-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 540px;
+}
+
+.hero-section .hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6rem;
+  height: 78%;
+}
+
+.hero-section h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.hero-section .hero-arrow {
+  width: 35px;
+  height: 110px;
+}

@@ -1,4 +1,11 @@
+@use "../abstracts" as *;
+
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -7,10 +14,6 @@ header {
   padding: 2rem 1.6rem;
 }
 
-.sticky header {
-  background-color: dodgerblue;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+header.sticky {
+  background-color: rgba(#3cbcfc, 0.9);
 }
