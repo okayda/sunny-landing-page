@@ -1,0 +1,51 @@
+@use "./abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+// font-family: 'Fraunces', serif; (700, 900)
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+// font-family: 'Barlow', sans-serif; (600)
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: $dark-grayish-blue;
+  background-color: $white;
+  font-size: 1.6rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+a:link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:link,
+a:link.active,
+h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
