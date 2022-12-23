@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+.product-section .product {
+  display: grid;
+}
+
+.product-img {
+  order: 1;
+}
+
+.product-content {
+  order: 2;
+
+  max-width: 375px;
+  margin: 0 auto;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  padding: 5.6rem 4rem;
+}
+
+.product-content h2 {
+  color: $very-dark-desaturated-blue;
+  font-size: 3.2rem;
+}
