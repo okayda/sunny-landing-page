@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.main-footer {
+  background-color: $light-cyan;
+  padding: 6rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.footer-logo {
+  align-self: center;
+
+  display: inline-block;
+  line-height: 0;
+  width: 64%;
+  height: 100%;
+}
+
+.main-footer a:link,
+.main-footer a:visited {
+  color: $dark-desaturated-cyan;
+  font-family: "Barlow", sans-serif;
+  text-transform: capitalize;
+}
+
+.footer-nav-links,
+.footer-nav-icons-links {
+  display: flex;
+}
+
+.footer-nav-links {
+  justify-content: space-between;
+  margin-bottom: 5.4rem;
+}
+
+.footer-nav-icons-links {
+  font-size: 2rem;
+  gap: 2.6rem;
+  justify-content: center;
+}
