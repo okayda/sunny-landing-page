@@ -1,7 +1,46 @@
+@use "../abstracts" as *;
+
 .testimonials-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+
+  padding: 6rem 5.6rem;
+}
+
+.testimonials-section h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-weight: 700;
+}
+
+.testimonial-content {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  align-items: center;
 }
 
 .testimonial-content img {
+  border-radius: 100px;
   height: 50px;
   width: 50px;
+}
+
+.testimonial-content blockquote {
+  color: $very-dark-grayish-blue;
+}
+
+.testimonial-position h3 {
+  color: $very-dark-desaturated-blue;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.testimonial-position span {
+  color: $grayish-blue;
 }
