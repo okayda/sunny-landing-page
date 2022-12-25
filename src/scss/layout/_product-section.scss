@@ -1,7 +1,11 @@
 @use "../abstracts" as *;
 
+.product-section {
+}
+
 .product-section .product {
   display: grid;
+  grid-template-columns: 1fr;
 }
 
 .product-img {
@@ -16,6 +20,7 @@
 
   text-align: center;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 2.4rem;
 
@@ -72,4 +77,28 @@
 
 .product-photography {
   color: $dark-blue;
+}
+
+@include tablet-laptop-sm-layout() {
+  .product-section .product {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 480px;
+  }
+
+  .product-first .product-img {
+    order: 2;
+  }
+
+  .product-second .product-img {
+    order: 1;
+  }
+
+  .product-wrapped {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-wrapped-img img {
+    object-position: center top;
+  }
 }
