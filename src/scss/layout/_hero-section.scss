@@ -1,11 +1,15 @@
 @use "../abstracts/" as *;
 
 .hero-section {
-  background-image: url("../../assets/mobile/image-header.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
   height: 540px;
+}
+
+.hero-section .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
 }
 
 .hero-wrapper {
@@ -15,6 +19,9 @@
   align-items: center;
   gap: 6rem;
   height: 78%;
+
+  max-width: 375px;
+  margin: 0 auto;
 }
 
 .hero-section h1 {
