@@ -1,19 +1,26 @@
 @use "../abstracts" as *;
 
 .testimonials-section {
-  display: flex;
-  flex-direction: column;
+  padding: 6rem 4rem;
+
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-weight: 700;
+    margin-bottom: 5rem;
+  }
+}
+
+.testimonial-contents {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 4rem;
   align-items: center;
 
-  padding: 6rem 4rem;
-}
-
-.testimonials-section h2 {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 3.5px;
-  font-weight: 700;
+  max-width: 34rem;
+  margin: 0 auto;
 }
 
 .testimonial-content {
@@ -23,24 +30,60 @@
   flex-direction: column;
   gap: 2.6rem;
   align-items: center;
+
+  img {
+    border-radius: 10rem;
+    height: 5rem;
+    width: 5rem;
+  }
+
+  blockquote {
+    color: $very-dark-grayish-blue;
+  }
 }
 
-.testimonial-content img {
-  border-radius: 100px;
-  height: 50px;
-  width: 50px;
+.testimonial-position {
+  h3 {
+    color: $very-dark-desaturated-blue;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
 }
 
-.testimonial-content blockquote {
-  color: $very-dark-grayish-blue;
+.testimonial-position {
+  span {
+    color: $grayish-blue;
+  }
 }
 
-.testimonial-position h3 {
-  color: $very-dark-desaturated-blue;
-  font-weight: 900;
-  margin-bottom: 1rem;
+@include tablet-laptop-sm-layout() {
+  .testimonial-contents {
+    max-width: 60rem;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.testimonial-position span {
-  color: $grayish-blue;
+@include desktop-layout() {
+  .testimonials-section {
+    padding: 16rem 4rem;
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  .testimonial-contents {
+    max-width: 120rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .testimonial-content {
+    max-width: 32rem;
+    margin: 0 auto;
+
+    blockquote {
+      font-size: 1.65rem;
+    }
+  }
 }
