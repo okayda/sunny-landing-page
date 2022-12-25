@@ -2,16 +2,16 @@
 
 .hero-section {
   position: relative;
-  height: 100vh;
+  height: 94vh;
 }
 
-.hero-section .hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -10;
-  object-fit: cover;
-  object-position: center center;
+.hero-section {
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
 }
 
 .hero-wrapper {
@@ -26,12 +26,14 @@
   margin: 0 auto;
 }
 
-.hero-section h1 {
-  text-align: center;
-  font-size: 4rem;
-  color: $white;
-  text-transform: uppercase;
-  letter-spacing: 6px;
+.hero-section {
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
 }
 
 .hero-arrow {
@@ -45,8 +47,10 @@
     gap: 4rem;
   }
 
-  .hero-section h1 {
-    font-size: 6.6rem;
+  .hero-section {
+    h1 {
+      font-size: 6.6rem;
+    }
   }
 }
 
@@ -54,9 +58,12 @@
   .hero-wrapper {
     max-width: none;
     height: 64%;
+    gap: 10rem;
   }
 
-  .hero-section h1 {
-    font-size: 10rem;
+  .hero-section {
+    h1 {
+      font-size: 10rem;
+    }
   }
 }

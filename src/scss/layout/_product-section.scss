@@ -1,21 +1,16 @@
 @use "../abstracts" as *;
 
 .product-section {
-}
-
-.product-section .product {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.product-img {
-  order: 1;
+  .product {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .product-content {
   order: 2;
 
-  max-width: 375px;
+  max-width: 37.5rem;
   margin: 0 auto;
 
   text-align: center;
@@ -25,16 +20,20 @@
   gap: 2.4rem;
 
   padding: 5.6rem 4rem;
+
+  h2 {
+    color: $very-dark-desaturated-blue;
+    font-size: 3.2rem;
+  }
 }
 
-.product-content h2 {
-  color: $very-dark-desaturated-blue;
-  font-size: 3.2rem;
+.product-img {
+  order: 1;
 }
 
 .product-wrapped {
   display: grid;
-  grid-template-rows: 540px 620px;
+  grid-template-rows: 54rem 62rem;
 }
 
 .product-wrapped-container {
@@ -55,34 +54,38 @@
   width: 100%;
   height: 100%;
   z-index: -10;
+
+  img {
+    object-fit: fill;
+  }
 }
 
 .product-wrapped-content {
-  max-width: 375px;
+  max-width: 37.5rem;
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
+
+  h2 {
+    font-size: 3.2rem;
+    text-transform: capitalize;
+  }
 }
 
-.product-wrapped-content h2 {
-  font-size: 3.2rem;
-  text-transform: capitalize;
-}
-
-.product-graphic {
+.product-content-graphic {
   color: $dark-desaturated-cyan;
 }
 
-.product-photography {
+.product-content-photography {
   color: $dark-blue;
 }
 
 @include tablet-laptop-sm-layout() {
   .product-section .product {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 480px;
+    grid-template-rows: 48rem;
   }
 
   .product-first .product-img {
@@ -94,11 +97,51 @@
   }
 
   .product-wrapped {
-    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 54rem 0;
   }
 
-  .product-wrapped-img img {
-    object-position: center top;
+  .product-wrapped-img {
+    img {
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
+}
+
+@include desktop-layout() {
+  .product-section {
+    .product {
+      grid-template-rows: 64rem;
+    }
+  }
+
+  .product-content {
+    text-align: left;
+    max-width: 70rem;
+    gap: 4rem;
+  }
+
+  .product-content h2,
+  .product-wrapped-content h2 {
+    font-size: 6rem;
+  }
+
+  .product-content p,
+  .product-wrapped-content p {
+    max-width: 40rem;
+    font-size: 1.85rem;
+  }
+
+  .product-content a:link {
+    font-size: 1.85rem;
+  }
+
+  .product-wrapped {
+    grid-template-rows: 70rem;
+  }
+
+  .product-wrapped-content {
+    max-width: 50rem;
   }
 }
