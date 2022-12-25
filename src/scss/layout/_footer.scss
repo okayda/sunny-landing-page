@@ -3,10 +3,15 @@
 .main-footer {
   background-color: $light-cyan;
   padding: 6rem 4rem;
+}
 
+.footer-wrapper {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+
+  max-width: 34rem;
+  margin: 0 auto;
 }
 
 .footer-logo {
@@ -18,11 +23,13 @@
   height: 100%;
 }
 
-.main-footer a:link,
-.main-footer a:visited {
-  color: $dark-desaturated-cyan;
-  font-family: "Barlow", sans-serif;
-  text-transform: capitalize;
+.main-footer {
+  a:link,
+  a:visited {
+    color: $dark-desaturated-cyan;
+    font-family: "Barlow", sans-serif;
+    text-transform: capitalize;
+  }
 }
 
 .footer-nav-links,
@@ -36,7 +43,29 @@
 }
 
 .footer-nav-icons-links {
-  font-size: 2rem;
-  gap: 2.6rem;
+  gap: 3.2rem;
   justify-content: center;
+
+  a:link {
+    line-height: 0;
+    font-size: 2.2rem;
+  }
 }
+
+@include desktop-layout {
+  .main-footer {
+    a:link {
+      font-size: 1.65rem;
+    }
+  }
+
+  .footer-wrapper {
+    max-width: 35.5rem;
+  }
+
+  .footer-nav-icons-links {
+    a:link {
+      font-size: 2.6rem;
+    }
+  }
+} ;
