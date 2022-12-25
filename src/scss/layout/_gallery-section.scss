@@ -1,5 +1,14 @@
+@use "../abstracts" as *;
+
 .gallery-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+}
+
+@include tablet-laptop-sm-layout() {
+  .gallery-section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
