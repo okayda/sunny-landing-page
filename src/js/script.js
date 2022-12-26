@@ -19,3 +19,13 @@ const typed = new Typed(".auto-typed", {
   backSpeed: 200,
   loop: true,
 });
+
+// smooth scroll at the bottom of the page
+document
+  .querySelector(".hero-arrow-btn")
+  .addEventListener("click", function () {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  });

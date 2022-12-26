@@ -1,11 +1,11 @@
 @mixin tablet-laptop-sm-layout() {
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 37.5em) {
     @content;
   }
 }
 
 @mixin desktop-layout() {
-  @media only screen and (min-width: 1300px) {
+  @media only screen and (min-width: 81.25em) {
     @content;
   }
 }

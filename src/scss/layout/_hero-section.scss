@@ -26,6 +26,27 @@
   margin: 0 auto;
 }
 
+@keyframes animate-tab {
+  0% {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    transform: translate(0);
+  }
+
+  50% {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    transform: translateY(-2.6rem);
+  }
+
+  100% {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    transform: translate(0);
+  }
+}
+
+.hero-arrow-btn {
+  animation: animate-tab 2s infinite;
+}
+
 .hero-section {
   h1 {
     text-align: center;
