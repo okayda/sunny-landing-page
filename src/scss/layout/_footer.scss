@@ -26,9 +26,15 @@
 .main-footer {
   a:link,
   a:visited {
+    transition: 0.4s;
     color: $dark-desaturated-cyan;
     font-family: "Barlow", sans-serif;
     text-transform: capitalize;
+  }
+
+  a:hover,
+  a:active {
+    color: $white;
   }
 }
 
