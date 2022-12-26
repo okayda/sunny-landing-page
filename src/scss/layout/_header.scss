@@ -1,19 +1,151 @@
 @use "../abstracts" as *;
 
+header.sticky {
+  background-color: rgba(#3cbcfc, 0.9);
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.6);
+}
+
+header.open-nav .links-container {
+  transform: translate(-50%, 0);
+}
+
 header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 500;
 
   width: 100%;
+
+  transition: 0.8s;
+  padding: 2rem 1.6rem;
+
+  .logo {
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: 3rem;
+    }
+  }
+}
+
+.header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.8s;
-  padding: 2rem 1.6rem;
+
+  max-width: 150rem;
+  margin: 0 auto;
 }
 
-header.sticky {
-  background-color: rgba(#3cbcfc, 0.9);
+.links-container {
+  position: absolute;
+  top: 11rem;
+  left: 50%;
+  transform: translate(-50%, -150%);
+
+  transition: 0.6s;
+  width: 100%;
+}
+
+.header-links {
+  position: relative;
+
+  background-color: $white;
+  box-shadow: 0px 15px 9px 4px rgba(0, 0, 0, 0.3);
+  max-width: calc(37.5rem - 3.2rem);
+  margin: 0 auto;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid $white;
+    border-right: 30px solid transparent;
+    transform: rotate(180deg);
+  }
+
+  a:link {
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    border-radius: 50px;
+
+    font-family: "Barlow", sans-serif;
+    font-size: 1.65rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+  }
+
+  a:link,
+  a:visited {
+    color: $dark-grayish-blue;
+  }
+
+  a:link.active,
+  a:visited.active {
+    color: $very-dark-desaturated-blue;
+    font-family: "Fraunces", serif;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+
+    background-color: $yellow;
+  }
+}
+
+@include tablet-laptop-sm-layout() {
+  .header-burger-btn {
+    display: none;
+  }
+
+  .links-container {
+    position: static;
+    transform: translateX(0);
+  }
+
+  .header-links {
+    background-color: transparent;
+    box-shadow: none;
+    max-width: none;
+    padding: 0;
+
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    &::before {
+      content: none;
+    }
+
+    a:link {
+      padding: 1rem 1.4rem;
+      transition: 0.4s;
+    }
+
+    a:link,
+    a:visited {
+      color: $white;
+    }
+
+    a:link.active,
+    a:visited.active {
+      color: $very-dark-desaturated-blue;
+      background-color: $white;
+    }
+
+    a:hover.active,
+    a:active.active {
+      color: $white;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
 }
